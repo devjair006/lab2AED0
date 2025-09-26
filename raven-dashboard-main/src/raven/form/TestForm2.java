@@ -4,6 +4,8 @@
  */
 package raven.form;
 
+import java.awt.Color;
+import javax.swing.JOptionPane;
 import raven.tabbed.TabbedForm;
 
 /**
@@ -15,9 +17,26 @@ public class TestForm2 extends TabbedForm {
     /**
      * Creates new form TestForm3
      */
+    private int[] elementos;
+    int n[];
+   
+
     public TestForm2() {
         initComponents();
+        metodoSA.setVisible(false);
+        metodoI.setVisible(false);
+        metodoBaraja.setVisible(false);
+        metodoBS.setVisible(false);
+        metodoB.setVisible(false);
+        Metodoshell.setVisible(false);
+
+        elementos = LogicaLab2.MandarAR();
+
     }
+    
+    
+
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,19 +47,1275 @@ public class TestForm2 extends TabbedForm {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelMO = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        metodoss = new javax.swing.JPanel();
+        BtSacudida = new javax.swing.JButton();
+        Btburbuja = new javax.swing.JButton();
+        BtShell = new javax.swing.JButton();
+        BtBurbujaSeñal = new javax.swing.JButton();
+        BtInDirecta = new javax.swing.JButton();
+        BtBaraja = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        metodoB = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        OdenText = new javax.swing.JLabel();
+        desordenText = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        TiempoO = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        metodoBS = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        OdenText3 = new javax.swing.JLabel();
+        desordenText3 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        TiempoO3 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        metodoI = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        OdenText4 = new javax.swing.JLabel();
+        desordenText4 = new javax.swing.JLabel();
+        jSeparator7 = new javax.swing.JSeparator();
+        TiempoO4 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        metodoSA = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        OdenText5 = new javax.swing.JLabel();
+        desordenText5 = new javax.swing.JLabel();
+        jSeparator8 = new javax.swing.JSeparator();
+        TiempoO5 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        metodoBaraja = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        OdenText6 = new javax.swing.JLabel();
+        desordenText6 = new javax.swing.JLabel();
+        jSeparator9 = new javax.swing.JSeparator();
+        TiempoO6 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        Metodoshell = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        OdenText7 = new javax.swing.JLabel();
+        desordenText7 = new javax.swing.JLabel();
+        jSeparator10 = new javax.swing.JSeparator();
+        TiempoO7 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+
+        panelMO.setForeground(new java.awt.Color(110, 110, 110));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setText("Metodos de ordenación");
+
+        javax.swing.GroupLayout panelMOLayout = new javax.swing.GroupLayout(panelMO);
+        panelMO.setLayout(panelMOLayout);
+        panelMOLayout.setHorizontalGroup(
+            panelMOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMOLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(383, 383, 383))
+            .addGroup(panelMOLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator2)
+                .addContainerGap())
+        );
+        panelMOLayout.setVerticalGroup(
+            panelMOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMOLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        BtSacudida.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        BtSacudida.setText("Sacudida");
+        BtSacudida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtSacudidaActionPerformed(evt);
+            }
+        });
+
+        Btburbuja.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        Btburbuja.setText("Burbuja");
+        Btburbuja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtburbujaActionPerformed(evt);
+            }
+        });
+
+        BtShell.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        BtShell.setText("Shell");
+        BtShell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtShellActionPerformed(evt);
+            }
+        });
+
+        BtBurbujaSeñal.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        BtBurbujaSeñal.setText("Burbuja con señal");
+        BtBurbujaSeñal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtBurbujaSeñalActionPerformed(evt);
+            }
+        });
+
+        BtInDirecta.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        BtInDirecta.setText("Insercion Directa");
+        BtInDirecta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtInDirectaActionPerformed(evt);
+            }
+        });
+
+        BtBaraja.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        BtBaraja.setText("Baraja");
+        BtBaraja.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtBarajaActionPerformed(evt);
+            }
+        });
+
+        jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        javax.swing.GroupLayout metodossLayout = new javax.swing.GroupLayout(metodoss);
+        metodoss.setLayout(metodossLayout);
+        metodossLayout.setHorizontalGroup(
+            metodossLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodossLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(metodossLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Btburbuja, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtBurbujaSeñal, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(96, 96, 96)
+                .addGroup(metodossLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtInDirecta, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtSacudida, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 301, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(metodossLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BtBaraja, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtShell, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34))
+        );
+        metodossLayout.setVerticalGroup(
+            metodossLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodossLayout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addGroup(metodossLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(metodossLayout.createSequentialGroup()
+                        .addComponent(BtBaraja, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtShell, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, metodossLayout.createSequentialGroup()
+                        .addComponent(BtInDirecta, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtSacudida, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(metodossLayout.createSequentialGroup()
+                        .addComponent(Btburbuja, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BtBurbujaSeñal, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel2.setText("Arreglo Ordenado");
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel3.setText("Arreglo desordenado");
+
+        OdenText.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        OdenText.setText("-");
+
+        desordenText.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        desordenText.setText("-");
+
+        jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        TiempoO.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TiempoO.setText("-");
+
+        jLabel5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel5.setText("TIempo de metodo de ordenacion");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap(637, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addComponent(TiempoO)
+                        .addGap(152, 152, 152))))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desordenText)
+                        .addComponent(jLabel3)
+                        .addComponent(OdenText)
+                        .addComponent(jLabel2))
+                    .addGap(314, 314, 314)
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(485, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addComponent(jLabel5)
+                .addGap(58, 58, 58)
+                .addComponent(TiempoO)
+                .addContainerGap(351, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel3)
+                            .addGap(32, 32, 32)
+                            .addComponent(desordenText)
+                            .addGap(99, 99, 99)
+                            .addComponent(jLabel2)
+                            .addGap(44, 44, 44)
+                            .addComponent(OdenText)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+
+        javax.swing.GroupLayout metodoBLayout = new javax.swing.GroupLayout(metodoB);
+        metodoB.setLayout(metodoBLayout);
+        metodoBLayout.setHorizontalGroup(
+            metodoBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoBLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        metodoBLayout.setVerticalGroup(
+            metodoBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoBLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel11.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel11.setText("Arreglo Ordenado");
+
+        jLabel12.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel12.setText("Arreglo desordenado");
+
+        OdenText3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        OdenText3.setText("-");
+
+        desordenText3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        desordenText3.setText("-");
+
+        jSeparator6.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        TiempoO3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TiempoO3.setText("-");
+
+        jLabel13.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel13.setText("TIempo de metodo de ordenacion");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap(637, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel13)
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addComponent(TiempoO3)
+                        .addGap(152, 152, 152))))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desordenText3)
+                        .addComponent(jLabel12)
+                        .addComponent(OdenText3)
+                        .addComponent(jLabel11))
+                    .addGap(314, 314, 314)
+                    .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(485, Short.MAX_VALUE)))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel13)
+                .addGap(58, 58, 58)
+                .addComponent(TiempoO3)
+                .addContainerGap(349, Short.MAX_VALUE))
+            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSeparator6, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel3Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel12)
+                            .addGap(32, 32, 32)
+                            .addComponent(desordenText3)
+                            .addGap(99, 99, 99)
+                            .addComponent(jLabel11)
+                            .addGap(44, 44, 44)
+                            .addComponent(OdenText3)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+
+        javax.swing.GroupLayout metodoBSLayout = new javax.swing.GroupLayout(metodoBS);
+        metodoBS.setLayout(metodoBSLayout);
+        metodoBSLayout.setHorizontalGroup(
+            metodoBSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoBSLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        metodoBSLayout.setVerticalGroup(
+            metodoBSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoBSLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel14.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel14.setText("Arreglo Ordenado");
+
+        jLabel15.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel15.setText("Arreglo desordenado");
+
+        OdenText4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        OdenText4.setText("-");
+
+        desordenText4.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        desordenText4.setText("-");
+
+        jSeparator7.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        TiempoO4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TiempoO4.setText("-");
+
+        jLabel16.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel16.setText("TIempo de metodo de ordenacion");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap(637, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(TiempoO4)
+                        .addGap(152, 152, 152))))
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desordenText4)
+                        .addComponent(jLabel15)
+                        .addComponent(OdenText4)
+                        .addComponent(jLabel14))
+                    .addGap(314, 314, 314)
+                    .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(485, Short.MAX_VALUE)))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel16)
+                .addGap(58, 58, 58)
+                .addComponent(TiempoO4)
+                .addContainerGap(347, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel15)
+                            .addGap(32, 32, 32)
+                            .addComponent(desordenText4)
+                            .addGap(99, 99, 99)
+                            .addComponent(jLabel14)
+                            .addGap(44, 44, 44)
+                            .addComponent(OdenText4)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+
+        javax.swing.GroupLayout metodoILayout = new javax.swing.GroupLayout(metodoI);
+        metodoI.setLayout(metodoILayout);
+        metodoILayout.setHorizontalGroup(
+            metodoILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoILayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        metodoILayout.setVerticalGroup(
+            metodoILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoILayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel17.setText("Arreglo Ordenado");
+
+        jLabel18.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel18.setText("Arreglo desordenado");
+
+        OdenText5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        OdenText5.setText("-");
+
+        desordenText5.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        desordenText5.setText("-");
+
+        jSeparator8.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        TiempoO5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TiempoO5.setText("-");
+
+        jLabel19.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel19.setText("TIempo de metodo de ordenacion");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap(637, Short.MAX_VALUE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addComponent(TiempoO5)
+                        .addGap(152, 152, 152))))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desordenText5)
+                        .addComponent(jLabel18)
+                        .addComponent(OdenText5)
+                        .addComponent(jLabel17))
+                    .addGap(314, 314, 314)
+                    .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(485, Short.MAX_VALUE)))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel19)
+                .addGap(58, 58, 58)
+                .addComponent(TiempoO5)
+                .addContainerGap(348, Short.MAX_VALUE))
+            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSeparator8, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel5Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel18)
+                            .addGap(32, 32, 32)
+                            .addComponent(desordenText5)
+                            .addGap(99, 99, 99)
+                            .addComponent(jLabel17)
+                            .addGap(44, 44, 44)
+                            .addComponent(OdenText5)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+
+        javax.swing.GroupLayout metodoSALayout = new javax.swing.GroupLayout(metodoSA);
+        metodoSA.setLayout(metodoSALayout);
+        metodoSALayout.setHorizontalGroup(
+            metodoSALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoSALayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        metodoSALayout.setVerticalGroup(
+            metodoSALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoSALayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel20.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel20.setText("Arreglo Ordenado");
+
+        jLabel21.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel21.setText("Arreglo desordenado");
+
+        OdenText6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        OdenText6.setText("-");
+
+        desordenText6.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        desordenText6.setText("-");
+
+        jSeparator9.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        TiempoO6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TiempoO6.setText("-");
+
+        jLabel22.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel22.setText("TIempo de metodo de ordenacion");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap(637, Short.MAX_VALUE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel22)
+                        .addGap(76, 76, 76))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(TiempoO6)
+                        .addGap(152, 152, 152))))
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desordenText6)
+                        .addComponent(jLabel21)
+                        .addComponent(OdenText6)
+                        .addComponent(jLabel20))
+                    .addGap(314, 314, 314)
+                    .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(485, Short.MAX_VALUE)))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel22)
+                .addGap(58, 58, 58)
+                .addComponent(TiempoO6)
+                .addContainerGap(359, Short.MAX_VALUE))
+            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel6Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSeparator9, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel6Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel21)
+                            .addGap(32, 32, 32)
+                            .addComponent(desordenText6)
+                            .addGap(99, 99, 99)
+                            .addComponent(jLabel20)
+                            .addGap(44, 44, 44)
+                            .addComponent(OdenText6)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+
+        javax.swing.GroupLayout metodoBarajaLayout = new javax.swing.GroupLayout(metodoBaraja);
+        metodoBaraja.setLayout(metodoBarajaLayout);
+        metodoBarajaLayout.setHorizontalGroup(
+            metodoBarajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoBarajaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        metodoBarajaLayout.setVerticalGroup(
+            metodoBarajaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(metodoBarajaLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jLabel23.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel23.setText("Arreglo Ordenado");
+
+        jLabel24.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel24.setText("Arreglo desordenado");
+
+        OdenText7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        OdenText7.setText("-");
+
+        desordenText7.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        desordenText7.setText("-");
+
+        jSeparator10.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        TiempoO7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        TiempoO7.setText("-");
+
+        jLabel25.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel25.setText("TIempo de metodo de ordenacion");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap(637, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel25)
+                        .addGap(150, 150, 150))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(TiempoO7)
+                        .addGap(250, 250, 250))))
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(desordenText7)
+                        .addComponent(jLabel24)
+                        .addComponent(OdenText7)
+                        .addComponent(jLabel23))
+                    .addGap(314, 314, 314)
+                    .addComponent(jSeparator10, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(559, Short.MAX_VALUE)))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addComponent(jLabel25)
+                .addGap(58, 58, 58)
+                .addComponent(TiempoO7)
+                .addContainerGap(348, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel7Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSeparator10, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGap(41, 41, 41)
+                            .addComponent(jLabel24)
+                            .addGap(32, 32, 32)
+                            .addComponent(desordenText7)
+                            .addGap(99, 99, 99)
+                            .addComponent(jLabel23)
+                            .addGap(44, 44, 44)
+                            .addComponent(OdenText7)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)))
+                    .addContainerGap()))
+        );
+
+        javax.swing.GroupLayout MetodoshellLayout = new javax.swing.GroupLayout(Metodoshell);
+        Metodoshell.setLayout(MetodoshellLayout);
+        MetodoshellLayout.setHorizontalGroup(
+            MetodoshellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MetodoshellLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        MetodoshellLayout.setVerticalGroup(
+            MetodoshellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MetodoshellLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panelMO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(metodoss, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(metodoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(metodoBS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(metodoI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(metodoSA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(metodoBaraja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(Metodoshell, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelMO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(metodoss, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(186, 186, 186)
+                    .addComponent(metodoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(16, 16, 16)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(196, 196, 196)
+                    .addComponent(metodoBS, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(186, 186, 186)
+                    .addComponent(metodoI, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(16, 16, 16)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(196, 196, 196)
+                    .addComponent(metodoSA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(186, 186, 186)
+                    .addComponent(metodoBaraja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(16, 16, 16)))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(196, 196, 196)
+                    .addComponent(Metodoshell, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
     }// </editor-fold>//GEN-END:initComponents
+//----------------------------METODO 1!!!!!-------------------------------------------------------------------------------
+
+    private void BtburbujaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtburbujaActionPerformed
+        // TODO add your handling code here:
+        metodoss.setVisible(false);
+        metodoSA.setVisible(false);
+        metodoI.setVisible(false);
+        metodoBaraja.setVisible(false);
+        metodoBS.setVisible(false);
+        metodoB.setVisible(true);
+        Metodoshell.setVisible(false);
+
+        int[] resuelto = elementos.clone();
+        long inicio = System.nanoTime();
+        LogicaLab2.burbuja(resuelto);
+        long fin = System.nanoTime();
+        long Tiempo = fin - inicio;
+        double tiempoMs = Tiempo / 1_000_000.0;
+
+        StringBuilder sb = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+        StringBuilder tabla = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+
+        int columnas = 8;  // cuántos números por fila
+        for (int i = 0; i < resuelto.length; i++) {
+            if (i % columnas == 0) {
+                tabla.append("<tr>"); // empieza fila
+            }
+
+            tabla.append("<td>").append(resuelto[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                tabla.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (resuelto.length % columnas != 0) {
+            tabla.append("</tr>");
+        }
+
+        tabla.append("</table></html>");
+
+//------------------------------------------------------------------------------------------------------
+        for (int i = 0; i < elementos.length; i++) {
+            if (i % columnas == 0) {
+                sb.append("<tr>"); // empieza fila
+            }
+
+            sb.append("<td>").append(elementos[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                sb.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (elementos.length % columnas != 0) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table></html>");
+
+        desordenText.setText(sb.toString());
+        OdenText.setText(tabla.toString());
+        TiempoO.setText(tiempoMs + " ms");
+    }//GEN-LAST:event_BtburbujaActionPerformed
+//----------------------------METODO 2!!!!!-------------------------------------------------------------------------------
+    private void BtInDirectaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtInDirectaActionPerformed
+        // TODO add your handling code here:
+        metodoss.setVisible(false);
+        metodoSA.setVisible(false);
+        metodoI.setVisible(true);
+        metodoBaraja.setVisible(false);
+        metodoBS.setVisible(false);
+        metodoB.setVisible(false);
+        Metodoshell.setVisible(false);
+
+        int[] resuelto = elementos.clone();
+        long inicio = System.nanoTime();
+        LogicaLab2.insercionDirecta(resuelto);
+        long fin = System.nanoTime();
+        long Tiempo = fin - inicio;
+        double tiempoMs = Tiempo / 1_000_000.0;
+
+        StringBuilder sb = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+        StringBuilder tabla = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+
+        int columnas = 8;  // cuántos números por fila
+        for (int i = 0; i < resuelto.length; i++) {
+            if (i % columnas == 0) {
+                tabla.append("<tr>"); // empieza fila
+            }
+
+            tabla.append("<td>").append(resuelto[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                tabla.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (resuelto.length % columnas != 0) {
+            tabla.append("</tr>");
+        }
+
+        tabla.append("</table></html>");
+
+//------------------------------------------------------------------------------------------------------
+        for (int i = 0; i < elementos.length; i++) {
+            if (i % columnas == 0) {
+                sb.append("<tr>"); // empieza fila
+            }
+
+            sb.append("<td>").append(elementos[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                sb.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (elementos.length % columnas != 0) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table></html>");
+
+        desordenText4.setText(sb.toString());
+        OdenText4.setText(tabla.toString());
+        TiempoO4.setText(tiempoMs + " ms");
+    }//GEN-LAST:event_BtInDirectaActionPerformed
+//----------------------------METODO 3!!!!!-------------------------------------------------------------------------------
+
+    private void BtBurbujaSeñalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtBurbujaSeñalActionPerformed
+        // TODO add your handling code here:
+        metodoss.setVisible(false);
+        metodoSA.setVisible(false);
+        metodoI.setVisible(false);
+        metodoBaraja.setVisible(false);
+        metodoBS.setVisible(true);
+        metodoB.setVisible(false);
+        Metodoshell.setVisible(false);
+
+        int[] resuelto = elementos.clone();
+        long inicio = System.nanoTime();
+        LogicaLab2.burbujaSeñal(resuelto);
+        long fin = System.nanoTime();
+        long Tiempo = fin - inicio;
+        double tiempoMs = Tiempo / 1_000_000.0;
+
+        StringBuilder sb = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+        StringBuilder tabla = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+
+        int columnas = 8;  // cuántos números por fila
+        for (int i = 0; i < resuelto.length; i++) {
+            if (i % columnas == 0) {
+                tabla.append("<tr>"); // empieza fila
+            }
+
+            tabla.append("<td>").append(resuelto[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                tabla.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (resuelto.length % columnas != 0) {
+            tabla.append("</tr>");
+        }
+
+        tabla.append("</table></html>");
+
+//------------------------------------------------------------------------------------------------------
+        for (int i = 0; i < elementos.length; i++) {
+            if (i % columnas == 0) {
+                sb.append("<tr>"); // empieza fila
+            }
+
+            sb.append("<td>").append(elementos[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                sb.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (elementos.length % columnas != 0) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table></html>");
+
+        desordenText3.setText(sb.toString());
+        OdenText3.setText(tabla.toString());
+        TiempoO3.setText(tiempoMs + " ms");
+    }//GEN-LAST:event_BtBurbujaSeñalActionPerformed
+//----------------------------METODO 4!!!!!-------------------------------------------------------------------------------
+
+    private void BtSacudidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtSacudidaActionPerformed
+        // TODO add your handling code here:
+        metodoss.setVisible(false);
+        metodoSA.setVisible(true);
+        metodoI.setVisible(false);
+        metodoBaraja.setVisible(false);
+        metodoBS.setVisible(false);
+        metodoB.setVisible(false);
+        Metodoshell.setVisible(false);
+
+        int[] resuelto = elementos.clone();
+        long inicio = System.nanoTime();
+        LogicaLab2.sacudida(resuelto);
+        long fin = System.nanoTime();
+        long Tiempo = fin - inicio;
+        double tiempoMs = Tiempo / 1_000_000.0;
+
+        StringBuilder sb = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+        StringBuilder tabla = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+
+        int columnas = 8;  // cuántos números por fila
+        for (int i = 0; i < resuelto.length; i++) {
+            if (i % columnas == 0) {
+                tabla.append("<tr>"); // empieza fila
+            }
+
+            tabla.append("<td>").append(resuelto[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                tabla.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (resuelto.length % columnas != 0) {
+            tabla.append("</tr>");
+        }
+
+        tabla.append("</table></html>");
+
+//------------------------------------------------------------------------------------------------------
+        for (int i = 0; i < elementos.length; i++) {
+            if (i % columnas == 0) {
+                sb.append("<tr>"); // empieza fila
+            }
+
+            sb.append("<td>").append(elementos[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                sb.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (elementos.length % columnas != 0) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table></html>");
+
+        desordenText5.setText(sb.toString());
+        OdenText5.setText(tabla.toString());
+        TiempoO5.setText(tiempoMs + " ms");
+    }//GEN-LAST:event_BtSacudidaActionPerformed
+//----------------------------METODO 5!!!!!-------------------------------------------------------------------------------
+
+    private void BtBarajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtBarajaActionPerformed
+        // TODO add your handling code here:
+        metodoss.setVisible(false);
+        metodoSA.setVisible(false);
+        metodoI.setVisible(false);
+        metodoBaraja.setVisible(true);
+        metodoBS.setVisible(false);
+        metodoB.setVisible(false);
+        Metodoshell.setVisible(false);
+
+        int[] resuelto = elementos.clone();
+        long inicio = System.nanoTime();
+        LogicaLab2.baraja(resuelto);
+        long fin = System.nanoTime();
+        long Tiempo = fin - inicio;
+        double tiempoMs = Tiempo / 1_000_000.0;
+
+        StringBuilder sb = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+        StringBuilder tabla = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+
+        int columnas = 8;  // cuántos números por fila
+        for (int i = 0; i < resuelto.length; i++) {
+            if (i % columnas == 0) {
+                tabla.append("<tr>"); // empieza fila
+            }
+
+            tabla.append("<td>").append(resuelto[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                tabla.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (resuelto.length % columnas != 0) {
+            tabla.append("</tr>");
+        }
+
+        tabla.append("</table></html>");
+
+//------------------------------------------------------------------------------------------------------
+        for (int i = 0; i < elementos.length; i++) {
+            if (i % columnas == 0) {
+                sb.append("<tr>"); // empieza fila
+            }
+
+            sb.append("<td>").append(elementos[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                sb.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (elementos.length % columnas != 0) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table></html>");
+
+        desordenText6.setText(sb.toString());
+        OdenText6.setText(tabla.toString());
+        TiempoO6.setText(tiempoMs + " ms");
+    }//GEN-LAST:event_BtBarajaActionPerformed
+
+    
+  //----------------------------METODO 6 !!!!!-------------------------------------------------------------------------------
+
+    
+    
+    private void BtShellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtShellActionPerformed
+        // TODO add your handling code here:
+        metodoss.setVisible(false);
+        metodoSA.setVisible(false);
+        metodoI.setVisible(false);
+        metodoBaraja.setVisible(false);
+        metodoBS.setVisible(false);
+        metodoB.setVisible(false);
+        Metodoshell.setVisible(true);
+
+        int[] resuelto = elementos.clone();
+        long inicio = System.nanoTime();
+        LogicaLab2.shell(resuelto);
+        long fin = System.nanoTime();
+        long Tiempo = fin - inicio;
+        double tiempoMs = Tiempo / 1_000_000.0;
+
+        StringBuilder sb = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+        StringBuilder tabla = new StringBuilder("<html><table border='1' cellspacing='3' cellpadding='3'>");
+
+        int columnas = 8;  // cuántos números por fila
+        for (int i = 0; i < resuelto.length; i++) {
+            if (i % columnas == 0) {
+                tabla.append("<tr>"); // empieza fila
+            }
+
+            tabla.append("<td>").append(resuelto[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                tabla.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (resuelto.length % columnas != 0) {
+            tabla.append("</tr>");
+        }
+
+        tabla.append("</table></html>");
+
+//------------------------------------------------------------------------------------------------------
+        for (int i = 0; i < elementos.length; i++) {
+            if (i % columnas == 0) {
+                sb.append("<tr>"); // empieza fila
+            }
+
+            sb.append("<td>").append(elementos[i]).append("</td>");
+
+            if ((i + 1) % columnas == 0) {
+                sb.append("</tr>"); // termina fila
+            }
+        }
+
+// Si el último <tr> no se cerró (cuando no es múltiplo exacto de columnas)
+        if (elementos.length % columnas != 0) {
+            sb.append("</tr>");
+        }
+
+        sb.append("</table></html>");
+
+// lo mandas al JLabel
+        desordenText7.setText(sb.toString());
+        OdenText7.setText(tabla.toString());
+        TiempoO7.setText(tiempoMs + " ms");
+    }//GEN-LAST:event_BtShellActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtBaraja;
+    private javax.swing.JButton BtBurbujaSeñal;
+    private javax.swing.JButton BtInDirecta;
+    private javax.swing.JButton BtSacudida;
+    private javax.swing.JButton BtShell;
+    private javax.swing.JButton Btburbuja;
+    private javax.swing.JPanel Metodoshell;
+    private javax.swing.JLabel OdenText;
+    private javax.swing.JLabel OdenText3;
+    private javax.swing.JLabel OdenText4;
+    private javax.swing.JLabel OdenText5;
+    private javax.swing.JLabel OdenText6;
+    private javax.swing.JLabel OdenText7;
+    private javax.swing.JLabel TiempoO;
+    private javax.swing.JLabel TiempoO3;
+    private javax.swing.JLabel TiempoO4;
+    private javax.swing.JLabel TiempoO5;
+    private javax.swing.JLabel TiempoO6;
+    private javax.swing.JLabel TiempoO7;
+    private javax.swing.JLabel desordenText;
+    private javax.swing.JLabel desordenText3;
+    private javax.swing.JLabel desordenText4;
+    private javax.swing.JLabel desordenText5;
+    private javax.swing.JLabel desordenText6;
+    private javax.swing.JLabel desordenText7;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator10;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JPanel metodoB;
+    private javax.swing.JPanel metodoBS;
+    private javax.swing.JPanel metodoBaraja;
+    private javax.swing.JPanel metodoI;
+    private javax.swing.JPanel metodoSA;
+    private javax.swing.JPanel metodoss;
+    private javax.swing.JPanel panelMO;
     // End of variables declaration//GEN-END:variables
 }

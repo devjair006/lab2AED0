@@ -3,6 +3,7 @@ package raven.drawer;
 import com.formdev.flatlaf.FlatDarkLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.IntelliJTheme;
+import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
@@ -15,6 +16,7 @@ import raven.drawer.component.menu.MenuAction;
 import raven.drawer.component.menu.MenuEvent;
 import raven.drawer.component.menu.MenuValidation;
 import raven.drawer.component.menu.SimpleMenuOption;
+import raven.form.LogicaLab2;
 import raven.form.TestForm;
 import raven.form.TestForm2;
 import raven.form.TestForm3;
@@ -27,6 +29,11 @@ import raven.tabbed.WindowsTabbed;
  * @author RAVEN
  */
 public class MyDrawerBuilder extends SimpleDrawerBuilder {
+    
+    
+    
+    
+    
 
     @Override
     public SimpleHeaderData getSimpleHeaderData() {
@@ -56,7 +63,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
             {"~Funcionalidad~"},
             {"Metodos de Ordenacion"},
             {"Metodos de Busqueda"},
-            {"Temas", "Claro", "Oscuro", "Carbon", "Light green", "ligt pink", "Chica Darks Purple", " nordico", "ligth suave", "dark rojo ", "dark amarillo", "Deep Ocean", "Dark Hard"}
+            {"Temas", "clarito", "Oscuro", "Carbon", "Light green", "ligt pink", "Chica Darks Purple", " nordico", "ligth suave", "dark rojo ", "dark amarillo", "Deep Ocean", "Dark Hard"}
         };
         String icons[] = {
             "tam.svg",
@@ -78,7 +85,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                             WindowsTabbed.getInstance().addTab("Tamano Array", new TestForm());
 //------------------------------------------------------------------------------------1 Metodos de Ordenacion xd-------------------------------------------------------------------------------------
                   
-                        } else if (index == 1) {
+                        } else if (index == 1 && LogicaLab2.MandarAR().length !=0) {
                             //crea una ventana para los metodos de ordenacion
                             WindowsTabbed.getInstance().addTab("Metodos de Ordenacion", new TestForm2());
  //------------------------------------------------------------------------------------2 Metodos de Busqueda xd-------------------------------------------------------------------------------------
@@ -92,6 +99,9 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                             SwingUtilities.invokeLater(() -> {
                                 try {
                                     UIManager.setLookAndFeel(new FlatLightLaf());
+                                    
+                                     
+                               
                                     for (java.awt.Window window : java.awt.Window.getWindows()) {
                                         SwingUtilities.updateComponentTreeUI(window);
                                         window.invalidate();
@@ -108,6 +118,9 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                             SwingUtilities.invokeLater(() -> {
                                 try {
                                     UIManager.setLookAndFeel(new FlatDarkLaf());
+                                   
+                                    
+                                    
                                     for (java.awt.Window window : java.awt.Window.getWindows()) {
                                         SwingUtilities.updateComponentTreeUI(window);
                                         window.invalidate();
@@ -162,10 +175,13 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                         }else if (index == 3 && subIndex == 5) {
                             SwingUtilities.invokeLater(() -> {
                                 try {
+                                    
                                     IntelliJTheme.setup(
                                             MyDrawerBuilder.class.getResourceAsStream(
                                                     "/com/formdev/flatlaf/intellijthemes/themes/material-theme-ui-lite/Solarized Light.theme.json"
                                             )
+                                            
+                                      
                                     );
                                     for (java.awt.Window window : java.awt.Window.getWindows()) {
                                         SwingUtilities.updateComponentTreeUI(window);

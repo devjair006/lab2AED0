@@ -12,69 +12,30 @@ package raven.form;
 import javax.swing.JOptionPane;
 
 public class LogicaLab2 {
+    static int[] elementos;
 
-   /* public static void main(String[] args) {
-        int n = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el tamaño del arreglo:"));
-        int[] arr = new int[n];
-
-        for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(JOptionPane.showInputDialog("Elemento [" + (i + 1) + "]:"));
+        public static int[] MandarAR() {
+        if (elementos == null) {
+            JOptionPane.showMessageDialog(null,"No ha definido el tamano");
+            return new int[0];
         }
-
-        int opcion = Integer.parseInt(JOptionPane.showInputDialog(
-                "Elija un método de ordenación:\n" +
-                        "1. Burbuja\n" +
-                        "2. Burbuja con Señal\n" +
-                        "3. Shell\n" +
-                        "4. Inserción Directa\n" +
-                        "5. Sacudida\n" +
-                        "6. Baraja"));
-
-        switch (opcion) {
-            case 1: burbuja(arr); break;
-            case 2: burbujaSeñal(arr); break;
-            case 3: shell(arr); break;
-            case 4: insercionDirecta(arr); break;
-            case 5: sacudida(arr); break;
-            case 6: baraja(arr); break;
-            default: JOptionPane.showMessageDialog(null, "Opción no válida");
-        }
-
-        mostrarArreglo(arr, "Arreglo ordenado");
-
-        // BÚSQUEDA
-        int buscar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número a buscar:"));
-        int opcionBusqueda = Integer.parseInt(JOptionPane.showInputDialog(
-                "Elija un método de búsqueda:\n" +
-                        "1. Binaria\n" +
-                        "2. Secuencial en Ordenados\n" +
-                        "3. Secuencial en Desordenados"));
-
-        int pos = -1;
-        switch (opcionBusqueda) {
-            case 1: pos = busquedaBinaria(arr, buscar); break;
-            case 2: pos = busquedaSecuencialOrdenada(arr, buscar); break;
-            case 3: pos = busquedaSecuencial(arr, buscar); break;
-            default: JOptionPane.showMessageDialog(null, "Opción no válida");
-        }
-
-        if (pos != -1)
-            JOptionPane.showMessageDialog(null, "Elemento encontrado en la posición: " + pos);
-        else
-            JOptionPane.showMessageDialog(null, "Elemento no encontrado");
-    }*/
+        return elementos.clone();
+    }
     
     
+    
+
+        
 public static int alta(int[] elementos, int n, int tam, int nuevoelemento) {
     if (n >= tam - 1) { // Sin espacio
-        JOptionPane.showMessageDialog(null, "No hay espacio para más empleados.");
+        JOptionPane.showMessageDialog(null, "No hay espacio para más eelementos.");
         return n;
     }
 
     // Checar si ya existe
     for (int i = 0; i <= n; i++) {
         if (elementos[i] == nuevoelemento) {
-            JOptionPane.showMessageDialog(null, "El empleado ya existe.");
+            JOptionPane.showMessageDialog(null, "El elemento ya existe.");
             return n;
         }
     }
@@ -82,7 +43,7 @@ public static int alta(int[] elementos, int n, int tam, int nuevoelemento) {
     // Insertar al siguiente índice disponible
     n++;
     elementos[n] = nuevoelemento;
-    JOptionPane.showMessageDialog(null, "Empleado agregado correctamente.");
+    
     return n;
 }
 
@@ -201,6 +162,16 @@ public static int alta(int[] elementos, int n, int tam, int nuevoelemento) {
             arr[j + 1] = carta;
         }
     }
+    
+    
+    
+    public static void obtenerAR(int[] elementoss){
+    
+    elementos = elementoss.clone();
+    
+    }
+    
+    
 
     // ---------- MÉTODOS DE BÚSQUEDA ----------
     public static int busquedaBinaria(int[] arr, int x) {
@@ -223,13 +194,17 @@ public static int alta(int[] elementos, int n, int tam, int nuevoelemento) {
         }
 
         if (band) {
-            JOptionPane.showMessageDialog(null, x + " se encuentra en la posición " + centro);
+            
             return centro;
         } else {
-            JOptionPane.showMessageDialog(null, x + " no se encuentra en el arreglo");
+            
             return -1;
         }
     }
+    
+//    busqueda binaria
+//    busqueda secuencial
+//    busqueda secuencial ordenada
 
     public static int busquedaSecuencial(int[] arr, int x) {
         int i = 0;

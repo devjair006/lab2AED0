@@ -86,6 +86,12 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     public static void main(String args[]) {
+        
+        
+        
+        UIManager.put( "Button.arc", 800 );
+        UIManager.put( "TextComponent.arc", 800 );
+        UIManager.put( "Component.focusWidth", 1 );
         FlatRobotoFont.install();
         FlatLaf.registerCustomDefaultsSource("raven.themes");
         UIManager.put("defaultFont", new Font(FlatRobotoFont.FAMILY, Font.PLAIN, 13));

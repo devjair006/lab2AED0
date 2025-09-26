@@ -4,6 +4,7 @@
  */
 package raven.form;
 
+import javax.swing.JOptionPane;
 import raven.tabbed.TabbedForm;
 
 /**
@@ -15,8 +16,19 @@ public class TestForm3 extends TabbedForm {
     /**
      * Creates new form TestForm3
      */
+    private int[] elementos;
+    private int[] elementosD;
+
     public TestForm3() {
         initComponents();
+
+        elementos = LogicaLab2.MandarAR();
+        elementosD = elementos.clone();
+        LogicaLab2.shell(elementos);
+//    busqueda binaria
+//    busqueda secuencial
+//    busqueda secuencial ordenada
+        binaria.setVisible(false);
     }
 
     /**
@@ -28,19 +40,226 @@ public class TestForm3 extends TabbedForm {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelMO = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        prin = new javax.swing.JPanel();
+        jButton2 = new javax.swing.JButton();
+        binaria = new javax.swing.JPanel();
+        numele = new javax.swing.JLabel();
+        numeroB = new javax.swing.JTextField();
+        EnviarBB = new javax.swing.JButton();
+        posele = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        poseleD = new javax.swing.JLabel();
+
+        panelMO.setBackground(new java.awt.Color(0, 153, 153));
+        panelMO.setForeground(new java.awt.Color(0, 153, 153));
+
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 36)); // NOI18N
+        jLabel1.setText("Metodos de Búsqueda");
+
+        javax.swing.GroupLayout panelMOLayout = new javax.swing.GroupLayout(panelMO);
+        panelMO.setLayout(panelMOLayout);
+        panelMOLayout.setHorizontalGroup(
+            panelMOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMOLayout.createSequentialGroup()
+                .addContainerGap(542, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(383, 383, 383))
+        );
+        panelMOLayout.setVerticalGroup(
+            panelMOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMOLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1)
+                .addContainerGap(73, Short.MAX_VALUE))
+        );
+
+        jButton2.setText("B. Binaria");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout prinLayout = new javax.swing.GroupLayout(prin);
+        prin.setLayout(prinLayout);
+        prinLayout.setHorizontalGroup(
+            prinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(prinLayout.createSequentialGroup()
+                .addGap(369, 369, 369)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(461, Short.MAX_VALUE))
+        );
+        prinLayout.setVerticalGroup(
+            prinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(prinLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(233, Short.MAX_VALUE))
+        );
+
+        numele.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        numele.setText("Numero de elementos:");
+
+        EnviarBB.setText("Enviar");
+        EnviarBB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EnviarBBActionPerformed(evt);
+            }
+        });
+
+        posele.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel2.setText("Ordenado");
+
+        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+        jLabel3.setText("Desordenado");
+
+        poseleD.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
+
+        javax.swing.GroupLayout binariaLayout = new javax.swing.GroupLayout(binaria);
+        binaria.setLayout(binariaLayout);
+        binariaLayout.setHorizontalGroup(
+            binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, binariaLayout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addGroup(binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, binariaLayout.createSequentialGroup()
+                        .addComponent(numeroB, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(64, 64, 64)
+                        .addComponent(EnviarBB, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 664, Short.MAX_VALUE)
+                        .addGroup(binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(poseleD, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(posele, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(251, 251, 251))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, binariaLayout.createSequentialGroup()
+                        .addComponent(numele)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel2))
+                        .addGap(343, 343, 343))))
+        );
+        binariaLayout.setVerticalGroup(
+            binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(binariaLayout.createSequentialGroup()
+                .addGroup(binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(binariaLayout.createSequentialGroup()
+                        .addGap(72, 72, 72)
+                        .addComponent(numele)
+                        .addGap(61, 61, 61)
+                        .addGroup(binariaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(numeroB, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(EnviarBB, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(binariaLayout.createSequentialGroup()
+                        .addGap(87, 87, 87)
+                        .addComponent(jLabel2)
+                        .addGap(66, 66, 66)
+                        .addComponent(posele)
+                        .addGap(43, 43, 43)
+                        .addComponent(jLabel3)
+                        .addGap(65, 65, 65)
+                        .addComponent(poseleD)))
+                .addContainerGap(233, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panelMO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(prin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(binaria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelMO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(prin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(186, 186, 186)
+                    .addComponent(binaria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(16, 16, 16)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        prin.setVisible(false);
+        binaria.setVisible(true);
+
+        int n = elementos.length;
+
+        numele.setText("elementos: " + n);
+
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void EnviarBBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarBBActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            if (numeroB.getText().isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Por favor llene el campo");
+            } else {
+
+                int x = Integer.parseInt(numeroB.getText());
+                int pos;
+                int posD;
+
+                pos = LogicaLab2.busquedaBinaria(elementos, x);
+                posD = LogicaLab2.busquedaSecuencial(elementosD, x);
+
+
+                if (pos != -1) {
+                    posele.setText("el elemento " + x + " se encontro en la posicion: " + (pos + 1));
+                } else {
+                    posele.setText(":Elemento no encontrado");
+                }
+
+                if (posD != -1) {
+                    poseleD.setText("el elemento " + x + " se encontro en la posicion: " + (posD + 1));
+                } else {
+                    poseleD.setText(":Elemento no encontrado");
+                }
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Debe ser un número entero.");
+        }
+    }//GEN-LAST:event_EnviarBBActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton EnviarBB;
+    private javax.swing.JPanel binaria;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JLabel numele;
+    private javax.swing.JTextField numeroB;
+    private javax.swing.JPanel panelMO;
+    private javax.swing.JLabel posele;
+    private javax.swing.JLabel poseleD;
+    private javax.swing.JPanel prin;
     // End of variables declaration//GEN-END:variables
 }

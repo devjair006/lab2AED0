@@ -35,14 +35,18 @@ public class TestForm extends TabbedForm {
                 tamarray.setEnabled(false);
                 
                 }
-        info.setVisible(false);
-        exitInfo.setVisible(false);
+        info.setVisible(true);
+        exitInfo.setVisible(true);
         
         validarCampo(tamarray, texto -> texto.matches("\\d+"));
         
         
         
     }
+    
+    
+    
+
     
     private void validarCampo(javax.swing.JTextField campo, java.util.function.Predicate<String> condicion) {
     campo.getDocument().addDocumentListener(new DocumentListener() {
@@ -95,6 +99,7 @@ public class TestForm extends TabbedForm {
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator1 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel1.setText("Ingrese el tamano del arreglo");
@@ -111,16 +116,22 @@ public class TestForm extends TabbedForm {
                 jButton1ActionPerformed(evt);
             }
         });
+        jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jButton1KeyPressed(evt);
+            }
+        });
 
         info.setIcon(new javax.swing.ImageIcon(getClass().getResource("/raven/image/manual ligth (1).png"))); // NOI18N
 
-        jButton2.setText("Como usarlo");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/raven/image/help_24dp_6E6E6E_FILL0_wght400_GRAD0_opsz24.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        exitInfo.setBackground(new java.awt.Color(255, 51, 51));
         exitInfo.setText("X");
         exitInfo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,8 +160,8 @@ public class TestForm extends TabbedForm {
         panelAggLayout.setHorizontalGroup(
             panelAggLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelAggLayout.createSequentialGroup()
-                .addComponent(elementoo, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addComponent(elementoo, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
                 .addComponent(integrar, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39))
             .addGroup(panelAggLayout.createSequentialGroup()
@@ -194,8 +205,8 @@ public class TestForm extends TabbedForm {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(panelAgg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 12, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 90, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -205,7 +216,7 @@ public class TestForm extends TabbedForm {
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(16, 16, 16)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(299, Short.MAX_VALUE)))
+                    .addContainerGap(377, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -226,58 +237,69 @@ public class TestForm extends TabbedForm {
                     .addGap(110, 110, 110)))
         );
 
+        jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
         javax.swing.GroupLayout TamLayout = new javax.swing.GroupLayout(Tam);
         Tam.setLayout(TamLayout);
         TamLayout.setHorizontalGroup(
             TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TamLayout.createSequentialGroup()
-                .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(TamLayout.createSequentialGroup()
-                        .addGap(176, 176, 176)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(TamLayout.createSequentialGroup()
-                        .addGap(129, 129, 129)
                         .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(TamLayout.createSequentialGroup()
+                                .addGap(176, 176, 176)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(TamLayout.createSequentialGroup()
+                                .addGap(129, 129, 129)
                                 .addComponent(jLabel1)
                                 .addGap(93, 93, 93)
-                                .addComponent(tamarray, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(tamarray, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(TamLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(21, 21, 21))
                     .addGroup(TamLayout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
                 .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(info, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, TamLayout.createSequentialGroup()
+                        .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
+                        .addComponent(info))
                     .addComponent(exitInfo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addGap(34, 34, 34)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         TamLayout.setVerticalGroup(
             TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(TamLayout.createSequentialGroup()
                 .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(TamLayout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tamarray, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(TamLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(exitInfo)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(info, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(TamLayout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(TamLayout.createSequentialGroup()
+                                .addGap(63, 63, 63)
+                                .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(tamarray, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(39, 39, 39)
+                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(TamLayout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(TamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButton2)
+                                    .addGroup(TamLayout.createSequentialGroup()
+                                        .addComponent(exitInfo)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(info, javax.swing.GroupLayout.PREFERRED_SIZE, 486, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -301,46 +323,44 @@ public class TestForm extends TabbedForm {
 
     private void bntAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntAgregarActionPerformed
         // TODO add your handling code here:
-
-        try {
-            if (integrar.getText().isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
-            } else {
-                int elementoA = Integer.parseInt(integrar.getText());
-                int antes = n;
-                n = LogicaLab2.alta(elemento, n, tam, elementoA);
-
-                // Si realmente se insertó (n cambió)
-                if (n != antes) {
-                    if (n < tam - 1) {
-                        elementoo.setText("Ingrese el elemento: " + (n + 2));
-                        // n empieza en -1, así que +2 muestra el número de elemento humano
-                    } else {
-                        integrar.setText("");
-                        elementoo.setText("Ingrese el elemento: sin espacios");
-                        integrar.setEnabled(false);
-                        bntAgregar.setEnabled(false);
-
-                        System.err.println("elemento 1" + elemento[0]);
-                        System.out.println("elemento 2" +elemento[1]);
-                        System.out.println("elemento 3" +elemento[2]);
-                        System.out.println("elemento 4" +elemento[3]);
-                        System.out.println("elemento 5" +elemento[4]);
-                    }
-                }
-
-                // limpiar campo si sigue activo
-                if (integrar.isEnabled()) {
-                    integrar.setText("");
-                }
-            }
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Debe ser un número entero.");
+         try {
+        if (integrar.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
+            return;
         }
+
+        int elementoA = Integer.parseInt(integrar.getText());
+        int antes = n;
+
+        // Agrega el elemento y actualiza n
+        n = LogicaLab2.alta(elemento, n, tam, elementoA);
+
+        LogicaLab2.obtenerAR(elemento); // si este método solo imprime, está bien
+
+        // Siempre actualiza el mensaje del campo de instrucción
+        if (n < tam - 1) {
+            elementoo.setText("Ingrese el elemento: " + (n + 2));
+            integrar.setEnabled(true);
+            bntAgregar.setEnabled(true);
+        } else {
+            elementoo.setText("Ingrese el elemento: sin espacios");
+            integrar.setText("");
+            integrar.setEnabled(false);
+            bntAgregar.setEnabled(false);
+        }
+
+        // Limpiar campo si sigue activo
+        if (integrar.isEnabled()) {
+            integrar.setText("");
+        }
+
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "Debe ser un número entero.");
+    }
     }//GEN-LAST:event_bntAgregarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+            elementoo.setText("Ingrese el elemento");
         try {
             if (tamarray.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Por favor llene todos los campos");
@@ -349,6 +369,8 @@ public class TestForm extends TabbedForm {
                 if (B > 0) {
                     tam = B;
                     elemento = new int[tam];
+                    n = -1; // 
+                    contador = 1; 
                     JOptionPane.showMessageDialog(this, "Tamaño agregado correctamente.");
 
                     bloqueado = true;
@@ -420,8 +442,13 @@ public class TestForm extends TabbedForm {
         jButton1.setEnabled(true);
         tamarray.setEnabled(true);
         panelAgg.setVisible(false);
+
         
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jButton1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1KeyPressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -440,7 +467,10 @@ public class TestForm extends TabbedForm {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
     private javax.swing.JPanel panelAgg;
     private javax.swing.JTextField tamarray;
     // End of variables declaration//GEN-END:variables
+
+    
 }
