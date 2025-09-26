@@ -54,7 +54,6 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
     
     -Dark Purple
      */
-
     @Override
     public SimpleMenuOption getSimpleMenuOption() {
         String menus[][] = {
@@ -79,22 +78,22 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                     @Override
                     public void selected(MenuAction action, int index, int subIndex) {
                         if (index == 0) {
- //------------------------------------------------------------------------------------0 Tamano de arreglo xd-------------------------------------------------------------------------------------
+                            //------------------------------------------------------------------------------------0 Tamano de arreglo xd-------------------------------------------------------------------------------------
 
                             //Crea una ventana para def el tamano del arreglo
                             WindowsTabbed.getInstance().addTab("Tamano Array", new TestForm());
 //------------------------------------------------------------------------------------1 Metodos de Ordenacion xd-------------------------------------------------------------------------------------
                   
-                        } else if (index == 1 && LogicaLab2.MandarAR().length !=0) {
+                        } else if (index == 1) {
                             //crea una ventana para los metodos de ordenacion
                             WindowsTabbed.getInstance().addTab("Metodos de Ordenacion", new TestForm2());
- //------------------------------------------------------------------------------------2 Metodos de Busqueda xd-------------------------------------------------------------------------------------
-                           
+                            //------------------------------------------------------------------------------------2 Metodos de Busqueda xd-------------------------------------------------------------------------------------
+
                         } else if (index == 2) {
                             //crea una ventana para los metodos de Busqueda
                             WindowsTabbed.getInstance().addTab("Metodos de Busqueda", new TestForm3());
 //------------------------------------------------------------------------------------3.1-------------------------------------------------------------------------------------
-                            
+
                         } else if (index == 3 && subIndex == 1) {
                             SwingUtilities.invokeLater(() -> {
                                 try {
@@ -113,7 +112,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                                 }
                             });
 //------------------------------------------------------------------------------------3.2-------------------------------------------------------------------------------------
-                            
+
                         } else if (index == 3 && subIndex == 2) {
                             SwingUtilities.invokeLater(() -> {
                                 try {
@@ -132,7 +131,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                                 }
                             });
 //------------------------------------------------------------------------------------3.3-------------------------------------------------------------------------------------
-                           
+
                         } else if (index == 3 && subIndex == 3) {
                             SwingUtilities.invokeLater(() -> {
                                 try {
@@ -172,7 +171,7 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                             });
 //------------------------------------------------------------------------------------3.4-------------------------------------------------------------------------------------
 
-                        }else if (index == 3 && subIndex == 5) {
+                        } else if (index == 3 && subIndex == 5) {
                             SwingUtilities.invokeLater(() -> {
                                 try {
                                     
@@ -195,12 +194,12 @@ public class MyDrawerBuilder extends SimpleDrawerBuilder {
                             });
 //------------------------------------------------------------------------------------3.4-------------------------------------------------------------------------------------
 
-                        }else if (index == 3 && subIndex == 6) {
+                        } else if (index == 3 && subIndex == 6) {
                             SwingUtilities.invokeLater(() -> {
                                 try {
                                     IntelliJTheme.setup(
                                             MyDrawerBuilder.class.getResourceAsStream(
-                                                    "/com/formdev/flatlaf/intellijthemes/themes/material-theme-ui-lite/Solarized Light.theme.json"
+                                                    "/com/formdev/flatlaf/intellijthemes/themes/MaterialTheme.theme.json"
                                             )
                                     );
                                     for (java.awt.Window window : java.awt.Window.getWindows()) {
